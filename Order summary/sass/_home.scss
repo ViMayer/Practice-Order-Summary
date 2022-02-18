@@ -1,0 +1,140 @@
+.s-background {
+  .image {
+    width: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      z-index: -1;
+      top: -5rem;
+      width: 100%;
+    }
+  }
+}
+
+.s-main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    height: 100%;
+    max-height: 70rem;
+    margin: 0 2.4rem;
+    box-shadow: 0 1.5rem 2rem 1rem rgba(0, 0, 0, 0.1);
+    width: 45rem;
+    height: 70rem;
+    border-radius: 5rem;
+    background-color: white;
+    overflow: hidden;
+    .top{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5rem;
+      h2 {
+        margin-top: 5.4rem;
+      }
+      p {
+        margin-top: 3rem;
+        width: 70%;
+      }
+    }
+    .mid {
+      display: flex;
+      justify-content: space-between;
+      height: 5.5rem;
+      .left, .right {
+        display: flex;
+        align-items: center;
+      }
+      .left {
+        justify-content: flex-end;
+        width: 100%;
+        p {
+          margin-right: 2rem;
+          strong {
+            color: $darkblue;
+            font-weight: 900;
+          }
+        }
+        img {
+          margin-right: 2rem;
+          max-width: 4.8rem;
+        }
+      }
+      .right {
+        justify-content: center;
+        width: 80%;
+        a {
+          transition: color .3s;
+          font-size: 1.3rem;
+          color: $brightb;
+          &:hover {
+            color: $purple;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      button {
+        margin-top: 5.7rem;
+        margin-bottom: 3.5rem;
+      }
+      a {
+        transition: color .3s;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 900;
+        &:hover {
+          color: $darkblue;
+        }
+      }
+    }
+  }
+  @media(max-width: 600px){
+    .container {
+      max-height: 64.8rem;
+      .top {
+        p {
+          width: 85%;
+        }
+      }
+      .mid {
+        .right {
+          width: 55%;
+        }
+      }
+      .bottom {
+        button {
+          margin-top: 4rem;
+        }
+      }
+    }
+    .btn-primary {
+      width: calc(100% - 14vw);
+    }
+  }
+
+}
+
+.btn-primary {
+  background-color: $brightb;
+  box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 1rem;
+  width: calc(100% - 4vw);
+  height: 5rem;
+  transition: all .2s;
+  p {
+    color: white;
+    font-weight: 700;
+  }
+  &:hover {
+    background-color: $purple;
+    box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.1);
+  }
+}
